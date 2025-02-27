@@ -2,7 +2,7 @@ package op;
 
 // 비교연산자 : 결과는 true or false
 // 대소비교 : <, >, <=, >=
- // 등가비교 : ==(equal), !=(not equal)
+// 등가비교 : ==(equal), !=(not equal)
 
 // 문자열 : "a", "abc" 
 
@@ -16,7 +16,7 @@ public class CompareEX3 {
         // 직접 넣는 방식, new로 주는 방식
         // 기본적인 방법은 new
 
-        String str1 = "abc"; 
+        String str1 = "abc";
         String str2 = "abc";
         // str1, str2 모두 같은 곳(스트링 pool)을 가리키고 있음
         String str3 = new String("abc");
@@ -26,18 +26,17 @@ public class CompareEX3 {
         // 같은 공간에서 저장된 문자열 비교시 == 을 사용(값 비교)하면 true (재사용)
         // 다른 공간에서 저장된 문자열 비교시 == 을 사용(주소 비교)하면 false
 
-        System.out.printf("str1 == str2 = %b\n",(str1 == str2)); // true
-        System.out.printf("str1 == str3 = %b\n",(str1 == str3)); // false
+        System.out.printf("str1 == str2 = %b\n", (str1 == str2)); // true
+        System.out.printf("str1 == str3 = %b\n", (str1 == str3)); // false
         // 문자열 비교 == 대신에, equls() or equlsIgnoreCase()를 사용
         // abc == ABC : false
         // equlsIgnoreCase : 대소문자 구분 없이 비교해줌
-        System.out.printf("str1 == equals(str3) = %b\n",(str1.equals(str3)));
-        System.out.printf("str1 == equals(ABC) = %b\n",(str1.equals("ABC")));
-        System.out.printf("str1 == equals(str3) = %b\n",(str1.equalsIgnoreCase(str3)));
-        System.out.printf("str1 == equals(ABC) = %b\n",(str1.equalsIgnoreCase("ABC")));
+        System.out.printf("str1 == equals(str3) = %b\n", (str1.equals(str3)));
+        System.out.printf("str1 == equals(ABC) = %b\n", (str1.equals("ABC")));
+        System.out.printf("str1 == equals(str3) = %b\n", (str1.equalsIgnoreCase(str3)));
+        System.out.printf("str1 == equals(ABC) = %b\n", (str1.equalsIgnoreCase("ABC")));
         // 문자열을 비교할 때엔 안전하게 비교하자.
-        // 문자열을 비교할 땐 ==  사용하지 않기
-        
-        
+        // 문자열을 비교할 땐 == 사용하지 않기
+
     }
 }
