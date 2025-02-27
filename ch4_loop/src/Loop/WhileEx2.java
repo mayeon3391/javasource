@@ -9,40 +9,37 @@ public class WhileEx2 {
     public static void main(String[] args) {
 
         int i = 1;
-        while (i<11) {
-            System.out.println(i + "   ");
+        while (i < 11) {
+            System.out.print(i + "   ");
             i++;
         }
         System.out.println();
 
         // 10~1
-        while (i>0) {
-            System.out.println(i + "   ");
+        i = 1;
+        while (i < 11) {
+            System.out.print(i + "   ");
             i++;
         }
         System.out.println();
 
         // 짝수만 출력 1~10
+        i = 1;
         while (i < 11) {
-            System.out.println(i + "   ");
+            if (i % 2 == 0) {
+                System.out.print(i + "   ");
+            }
             i++;
         }
-        System.out.println();
-
-        // i가 짝수이면 출력
-        while (i < 11) {
-            System.out.println(i + "   ");
-            i++;
-        }
-        
         System.out.println();
 
         // i += 2 : i = i + 2
         i = 2;
         while (i < 11) {
             i++;
+            System.out.print(i + "   ");
         }
-        
+
         System.out.println();
     }
 }
