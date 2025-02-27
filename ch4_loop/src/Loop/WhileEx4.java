@@ -1,6 +1,6 @@
 package Loop;
 
-public class ForEx4 {
+public class WhileEx4 {
     public static void main(String[] args) {
         // 구구단 출력
 
