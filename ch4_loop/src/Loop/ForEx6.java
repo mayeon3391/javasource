@@ -19,5 +19,6 @@ public class ForEx6 {
         }
 
         System.out.println(num + "! = " + fact);
+        scanner.close();
     }
 }

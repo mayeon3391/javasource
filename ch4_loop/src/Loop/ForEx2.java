@@ -44,5 +44,18 @@ public class ForEx2 {
             System.out.print(i + "   ");
         }
         System.out.println();
+
+        // i를 밖으로 빼는 것도 가능
+        // 조건을 어러개 선언도 가능
+        int i = 0;
+        for (int j = 0, k = 1; i < args.length; i++) {
+
+        }
+
+        // 공백으로도 사용 가능
+        // 대신 멈추기 위한 종료 코드 필요
+        // for (; ; ) {
+
+        // }
     }
 }
