@@ -1,4 +1,4 @@
-package ch5_array;
+package Array;
 
 import java.util.Scanner;
 
