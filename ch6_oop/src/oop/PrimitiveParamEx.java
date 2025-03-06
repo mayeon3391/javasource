@@ -8,8 +8,8 @@ public class PrimitiveParamEx {
         Data d = new Data();
         d.x = 100;
         System.out.println("main() : x = " + d.x);
-        // change(d.x);
-        change2(d);
+        // change(d.x); 값을 복사
+        change2(d); // 주소 복사
         System.out.println("After change() ");
         System.out.println(d.x);
         // PrimitiveParamEx obj = new PrimitiveParamEx();
