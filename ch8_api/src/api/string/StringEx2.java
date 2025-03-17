@@ -7,59 +7,60 @@ public class StringEx2 {
         String str = "안녕하세요";
 
         // 문자열 길이
-        System.out.println("문자열 길이 " + str.length());
-        System.out.println("지정된 위치에 있는 문자 반환 " + str.charAt(0));
-        System.out.println("지정된 위치에 있는 문자 반환 " + str.charAt(4));
-
+        System.out.println("문자열 길이 : " + str.length());
+        System.out.println("지정한 위치의 문자 : " + str.charAt(0));
+        System.out.println("지정한 위치의 문자 : " + str.charAt(4));
         for (int i = 0; i < str.length(); i++) {
-            System.out.print(str.charAt(i));
+            System.out.print("" + str.charAt(i));
         }
+        System.out.println();
 
-        // char 배열로 변환 ['안', ' 녕']
-        // char[] chArr = new char[5];
-        char[] chArr = new char[str.length()];
-        // chArr[0] = str.charAt(0);
-        // chArr[1] = str.charAt(1);
-        // chArr[2] = str.charAt(2);
-        // chArr[3] = str.charAt(3);
-        // chArr[4] = str.charAt(4);
+        // char 배열로 변환['안','녕']
+        char chArr[] = new char[str.length()];
         for (int i = 0; i < chArr.length; i++) {
             chArr[i] = str.charAt(i);
         }
-
-        System.out.println("chArr " + Arrays.toString(chArr));
+        System.out.println(Arrays.toString(chArr));
+        System.out.println(chArr);
 
         // String => char 배열
-        char[] result = str.toCharArray();
+        char result[] = str.toCharArray();
+        System.out.println(Arrays.toString(result));
 
-        // 존재하면 인덱스 반환
-        System.out.println("주어진 문자가 문자열에 존재하는 여부 " + str.indexOf("안"));
-        System.out.println("주어진 문자가 문자열에 존재하는 여부 " + str.indexOf("반"));
+        System.out.println("지정한 문자의 문자열 내 위치 : " + str.indexOf("요"));
+        System.out.println("지정한 문자의 문자열 내 위치(없을경우 -1) : " + str.indexOf("집"));
 
-        System.out.println("주어진 문자가 문자열에 존재하는 여부 " + str.contains("안"));
+        System.out.println("주어진 문자가 문자열에 존재하는 지 여부 : " + str.contains("안"));
 
         String subject = "자바의 정석";
-        // 자바 문자가 있으면 자바와 관련있는 책 입니다. /자바와 관련 없는 책 입니다.
-        System.out.println(subject.indexOf("자바"));
+        String subject2 = "자라와 바다";
+        String subject3 = "자 바";
 
-        if (subject.indexOf("자바") >= 0) {
-            System.out.println("자바와 관련 있는 책 입니다.");
+        System.out.println(subject2.indexOf("자바"));
+        // 자바 문자가 있으면 자바와 관련있는 책입니다. / 자바와 관련없는 책입니다.
+        if (subject2.indexOf("자바") > -1) {
+            System.out.println("자바와 관련있는 책입니다.");
         } else {
-            System.out.println("자바와 관련 없는 책 입니다.");
+            System.out.println("자바와 관련없는 책입니다.");
         }
 
-        if (subject.contains("자바")) {
-            System.out.println("자바와 관련 있는 책 입니다.");
+        if (subject2.contains("자바")) {
+            System.out.println("자바와 관련있는 책입니다.");
         } else {
-            System.out.println("자바와 관련 없는 책 입니다.");
+            System.out.println("자바와 관련없는 책입니다.");
         }
 
-        // 찾기 시작하는 위치 지정 가능
-        System.out.println("찾는 시작위치 지정 " + str.indexOf("하", 4));
-        System.out.println("문자열의 오른쪽 끝부터 찾기 " + str.lastIndexOf("하"));
+        // fromIndex : 찾기 시작하는 위치 지정
+        System.out.println(str.indexOf("하", 3));
+        System.out.println(str.lastIndexOf("하", 3)); // 문자열 끝에서 부터
         String str2 = "java.lang.String";
-        System.out.println(str2.indexOf(".")); // 왼쪽에서 처음 찾은 위치
-        System.out.println(str2.indexOf(".", 5)); // 시작위치를 5부터 찾아라
-        System.out.println(str2.lastIndexOf(".")); // 오른쪽에서 처음 찾은 위치
+        System.out.println(str2.indexOf("."));
+        System.out.println(str2.lastIndexOf("."));
+
+        String str3 = "java.lang.String";
+        System.out.println(Arrays.toString(str3.split("\\.")));
+        String arr[] = str3.split("\\.");
+        System.out.printf("%s 에 들어간 .의 갯수 : %d", str3, arr.length - 1);
+
     }
 }
