@@ -27,7 +27,7 @@ public class InputStreamEx2 {
             String name = new String(b, 0, input - 2);
             System.out.println(name);
 
-            out.write(input);
+            // out.write(input);
 
         } catch (IOException e) {
             e.printStackTrace();

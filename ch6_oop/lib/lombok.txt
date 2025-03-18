@@ -1,0 +1,4 @@
+lombok.jar : getter, setter 생성자 자동 완성
+jar : 자바 클래스 압축 파일
+라이브러리 사용
+Scanner 입력 시 해당 명령어가 어디있는지 알려주며 import 구문 사용
